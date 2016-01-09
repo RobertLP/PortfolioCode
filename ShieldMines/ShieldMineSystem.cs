@@ -62,7 +62,7 @@ public class ShieldMineSystem : MonoBehaviour
 		return ActiveBrothers.ToArray();
 	}
 
-	public bool	LinkedFinishedFlickering(GameObject me) // checks if all the brothers of me are finished flickering
+	public bool LinkedFinishedFlickering(GameObject me) // checks if all the brothers of me are finished flickering
 	{
 		GameObject[] ActiveBrothers = FindActiveBrothers(me);
 
