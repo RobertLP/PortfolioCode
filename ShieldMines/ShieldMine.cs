@@ -50,7 +50,7 @@ public class ShieldMine : MonoBehaviour
 
 	private ShieldMineSystem mineSys;
 	
-	void Awake() // assign children and start locations. Save health to starthealth for reset
+	private void Awake() // assign children and start locations. Save health to starthealth for reset
 	{
 		mineSys = GameObject.Find("LogicHook").GetComponent<ShieldMineSystem>();
 		startHealth = health;
@@ -60,7 +60,7 @@ public class ShieldMine : MonoBehaviour
 		bottomEmitStart = bottomEmit.transform.localPosition;
 	}
 
-	void OnEnable() // assign new (closest) brother, set the emitter, and start unfolding
+	private void OnEnable() // assign new (closest) brother, set the emitter, and start unfolding
 	{
 		viewportPos = Camera.main.WorldToViewportPoint(this.transform.position);
 		mineSys.GoTroughActivatedMines(this.gameObject);
@@ -68,7 +68,7 @@ public class ShieldMine : MonoBehaviour
 		StartCoroutine(UnfoldEmitter());
 	}
 	
-	void OnDisable() // reset emitter Obj locations, stop all coroutines, and reset values
+	private void OnDisable() // reset emitter Obj locations, stop all coroutines, and reset values
 	{
 		topEmit.transform.localPosition = topEmitStart;
 		bottomEmit.transform.localPosition = bottomEmitStart;
@@ -103,7 +103,7 @@ public class ShieldMine : MonoBehaviour
 	}
 	
 
-	void Update()
+	private void Update()
 	{
 		//emitEffect.SetPosition(0, topEmit.transform.position); // Update emitter locations because of camera movement. 
 		//emitEffect.SetPosition(1, bottomEmit.transform.position);
