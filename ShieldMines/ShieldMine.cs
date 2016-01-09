@@ -105,8 +105,8 @@ public class ShieldMine : MonoBehaviour
 
 	void Update()
 	{
-		emitEffect.SetPosition(0, topEmit.transform.position); // Update emitter locations because of camera movement.
-		emitEffect.SetPosition(1, bottomEmit.transform.position);
+		//emitEffect.SetPosition(0, topEmit.transform.position); // Update emitter locations because of camera movement. 
+		//emitEffect.SetPosition(1, bottomEmit.transform.position);
 		if(health <= 0)
 			FindDeathType();
 		//this.transform.position = Camera.main.ViewportToWorldPoint(viewportPos);
@@ -268,7 +268,7 @@ public class ShieldMine : MonoBehaviour
 			}
 			finishFlicker = true; // signals that the flickering is finished
 			Destroy(this.transform.GetChild(2).gameObject);
-			shieldCaster = false; // NEW NEW NEW NEW NEW NEW NEW NEW NEW NEW NEW NEW NEW
+			shieldCaster = false; 
 		}
 		if(this.health <= 0)
 			StartCoroutine(DisableMine());
