@@ -37,21 +37,6 @@ public class DetectorChild : MonoBehaviour
 			else
 				detScript.collision = false;
 		}
-//		else
-//		{
-//			detScript.leftObstructed = false;
-//			detScript.rightObstructed = false;
-//			detScript.frontObstructed = false;
-//			detScript.collision = false;
-//		}
-//
-//		if(other == null)
-//		{
-//			detScript.leftObstructed = false;
-//			detScript.rightObstructed = false;
-//			detScript.frontObstructed = false;
-//			detScript.collision = false;
-//		}
 	}
 	void OnTriggerExit(Collider other)
 	{
