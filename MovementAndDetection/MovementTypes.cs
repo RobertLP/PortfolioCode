@@ -133,15 +133,4 @@ public class MovementTypes : MonoBehaviour
 			timer = 0;
 		return new Vector3 (velocityX,0,0);
 	}
-
-	public Vector3 MoveNormalHeavy()
-	{
-		return new Vector3(0,0,0); // TEMP
-	}
-
-	public Vector3 MoveNormalBoss()
-	{
-		return new Vector3(0,0,0); // TEMP
-	}
-	
 }
